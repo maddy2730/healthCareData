@@ -69,7 +69,7 @@ mongoose.connect('mongodb://localhost:27017/college', { useNewUrlParser: true, u
           // Generate JWT token for the authenticated user
           const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '300s' });
       
-          // Send the token back to the client
+          // Send the token back to the client add a new line
           res.status(200).json({ token });
         } catch (error) {
           console.error('Error logging in:', error);
